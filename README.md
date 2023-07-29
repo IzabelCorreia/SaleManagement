@@ -1,4 +1,4 @@
-<h1 align = "center"> Gerenciamento de Vendas </h1>
+<h1 align = "center"> Sales Management </h1>
 
 <div align = "center">
      <a href="[https://instagram.com/rafaballerini](https://www.instagram.com/httpscorreia/)" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
@@ -6,11 +6,9 @@
 </div>
 <br>
 
-<p> 📚 resumo do projeto</p>
-
 <div>
 
-<p>👤 status: em andamento </p>
+<p>👤 status: in progress </p>
 
 <hr>
 <h3> Tecnologias Usadas </h3>
