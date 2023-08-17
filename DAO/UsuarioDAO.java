@@ -1,8 +1,15 @@
 package DAO;
 
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import Dominio.Usuario;
+
+import java.sql.PreparedStatement;
+//import java.sql.ResultSet;
+import java.sql.SQLException;
+//import java.util.ArrayList;
+//import java.util.List;
+//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+//   usuário é a classe destinada aos funcionários 
 
 public class UsuarioDAO {
 
@@ -12,30 +19,33 @@ public class UsuarioDAO {
         this.conexao = new ConexaoMySQL();
     }
 
-    public void inserir (Usuario usuario){
+    public void addUser (Usuario usuario){
         try{
-            String sql = "INSERT INTO usuario(id, nome, usuario, senha, estado) VALUES(?,?,?,?,?)";
+            String sql = "INSERT INTO usuario( nome, usuario, senha, estado) VALUES(?,?,?,?)";
             PreparedStatement ps = conexao.obterConexao().prepareStatement(sql);
-            ps.setLong(1, usuario.getId());
-            ps.setString(2, usuario.getNome());
-            ps.setString(3, usuario.getUsuario());
-            ps.setString(4, usuario.getSenha());
-            ps.setBoolean(5, usuario.getEstado());
-            
+
+            //BCryptPassworsEncode password = new BCryptPassworsEncode();
+            //Script passwordHash = password.encode(usuario.getSenha());
+            ps.setString(1, usuario.getNome());
+            ps.setString(2, usuario.getUsuario());
+            ps.setString(3, usuario.getSenha());
+            ps.setBoolean(4, usuario.getEstado());
             ps.close();
+
+            System.out.println("Usuário adicionado com sucesso!");
+            
         }catch(SQLException e){
             e.printStackTrace();
             
         }
         
     }
-    // obter dados por ID
-    // obter dados por critério
-    // total de registro
-    // listar 
-    // remover 
-    // atualizar 
-    public void atualizarDados(Usuario usuario) {
+
+    public void saveUser(Usuario usuario){
+        
+    }
+
+    public void updateDataUser(Usuario usuario) {
         try{
             String sql = "UPDATE usuario SET (nome = ?, usuario = ?, senha = ?, estado = ?)";
             PreparedStatement ps = conexao.obterConexao().prepareStatement(sql);
@@ -45,4 +55,26 @@ public class UsuarioDAO {
         }
         
     }
+
+    public void deleteUser(){
+
+    }
+
+    /*listar através do ID 
+
+    public List<Usuario> listUser(){
+        String sql = "SELECT * FROM usuario";
+        List<Usuario> users = new ArrayList<>();
+        try{
+            ResultSet result = conexao.obterConexao().prepareStatement(sql).executeQuery();
+            while(result.next()){
+                users.add(getUsuario(result));
+            }
+        }catch(SQLException e){
+            System.out.println(String.format("erro: %s", e.getMessage()));
+        }
+        return users;
+    }
+    */
+
 }

@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+body{
+    background-color: #ffff;
+}
+.conteiner{
+    width: 887px;
+    height: 540px;
+    background-color: #719F9F;
+    position: absolute;
+    left: 180px;
+    top: 40px;
+}
+.form-conteiner{
+    position: absolute;
+    display: flex;
+    left: 260px;
+    top: 30px;
+}
+.form{
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 72px;
+}
+h1{
+    font-family: 'Poppins', sans-serif;    
+    margin-top: 32px;
+}
+.input{
+    width: 200px;
+    height: 26px;
+    border: none;
+    justify-content: space-between;
+    margin: 10px;
+}
+.botEnv{
+    width: 80px;
+    height: 32px;
+    margin-right: 22px;
+}
+.botCan{
+    width: 80px;
+    height: 32px;
+    margin-left: 10px;
+}
+.cadastro{
+    font-family: 'Poppins';
+    font-size: 12px;
+    color: #ffff;
+    text-align: right;
+}
+p{
+    font-family: 'Poppins';
+    font-size: 12px;
+    margin-top: 12px;
+    margin-right: 80px;
+    color: #ffff;
+}
