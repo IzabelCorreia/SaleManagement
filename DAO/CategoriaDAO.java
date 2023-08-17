@@ -22,6 +22,9 @@ public class CategoriaDAO {
             e.printStackTrace();
         }
     }
+    public void updateCategoria(){
+        
+    }
 
 
 
