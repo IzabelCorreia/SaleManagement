@@ -7,8 +7,8 @@ import java.sql.SQLException;
 public class ConexaoMySQL implements Conexao{
 
     private final String USUARIO = "root";
-    private final String SENHA = "34615207belPP@";
-    private final String URL = "C:\\Users\\Izabel\\Documents\\Estudos\\Dados.mwb";
+    private final String SENHA = "********";
+    private final String URL = "********";
     private Connection conectar;
 
     public Connection obterConexao() throws SQLException {
